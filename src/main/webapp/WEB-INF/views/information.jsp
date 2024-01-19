@@ -19,7 +19,7 @@
             <br>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <a href="${pageContext.request.contextPath}/information/semester" class="btn btn-secondary">학기별 이수 학점 조회 &raquo;</a> <!-- score -->
+                    <a href="${pageContext.request.contextPath}/information/semester?name=${pageContext.request.userPrincipal.name}" class="btn btn-secondary">학기별 이수 학점 조회 &raquo;</a> <!-- score -->
                 </div>
             </div>
             <p>

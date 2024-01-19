@@ -1,10 +1,10 @@
 package kr.ac.hansung.cse.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -16,16 +16,11 @@ public class HomeController {
 		return "home"; // ~/home.jsp
 	}
 	
-	@RequestMapping(value = "/information")
+	@RequestMapping("/information")
 	public String information() {
 		return "information"; // ~/information.jsp
 	}
-
-	@RequestMapping(value = "/information/semester")
-	public String semester() {
-		return "semester"; // ~/semester.jsp
-	}
-
+	
 	@RequestMapping(value = "/check")
 	public String check() {
 		return "check"; // ~/check.jsp

@@ -19,8 +19,7 @@
 		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/informationLists" access="permitAll" />
-		<intercept-url pattern="/information" access="hasRole('ROLE_USER')" />
-		<intercept-url pattern="/information/semester" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/information/**" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/enroll" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/check" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/offers" access="hasRole('ROLE_ADMIN')" /> <!--  isAuthenticated() -->
