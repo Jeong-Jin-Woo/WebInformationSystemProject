@@ -21,8 +21,7 @@
 				<div class='alert alert-danger'>아이디와 비밀번호를 확인해 주세요.</div>
 				<!--  <div>${errorMsg}</div>  -->
 			</c:if>
-			<form class="form-signin" action="<c:url value="login"/>"
-				method="post">
+			<form class="form-signin" action="<c:url value="login"/>" method="post">
 				<div class="form-group">
 					<label for="inputUserName" class="sr-only">User Name</label> <input
 						type="text" class="form-control" placeholder="ID"

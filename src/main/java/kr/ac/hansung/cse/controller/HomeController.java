@@ -20,14 +20,4 @@ public class HomeController {
 	public String information() {
 		return "information"; // ~/information.jsp
 	}
-	
-	@RequestMapping(value = "/check")
-	public String check() {
-		return "check"; // ~/check.jsp
-	}
-
-	@RequestMapping(value = "/enroll")
-	public String enroll() {
-		return "enroll"; // ~/enroll.jsp
-	}
 }

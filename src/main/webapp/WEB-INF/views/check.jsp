@@ -14,6 +14,11 @@
    <div class="container text-center">
         <br>
         <h3>수강 신청 현황 조회</h3>
+        
+	<c:forEach var="enroll" items="${enrolls}">
+		<p> <c:out value="${enroll}" /> </p>
+	</c:forEach>
+        
    </div>
 </body>
 </html>

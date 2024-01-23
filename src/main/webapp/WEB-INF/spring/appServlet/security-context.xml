@@ -21,7 +21,8 @@
 		<intercept-url pattern="/informationLists" access="permitAll" />
 		<intercept-url pattern="/information/**" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/enroll" access="hasRole('ROLE_USER')" />
-		<intercept-url pattern="/check" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/doenroll" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/check" access="permitAll" />
 		<intercept-url pattern="/offers" access="hasRole('ROLE_ADMIN')" /> <!--  isAuthenticated() -->
 		<intercept-url pattern="/createoffer" access="permitAll" />
 		<intercept-url pattern="/docreate" access="permitAll" />
