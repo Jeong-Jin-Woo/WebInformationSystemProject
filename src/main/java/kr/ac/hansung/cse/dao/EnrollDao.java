@@ -32,7 +32,7 @@ public class EnrollDao {
 	public List<Enroll> getEnrolls(String name) {
     	String sql = "select stu_name, class.class_id, title, name, division, classroom, course.credit from enrollment, class, course, offers "+
     				"where enrollment.class_id=class.class_id and course.course_id=class.course_id and offers.id=class.prof_id"+
-    				" and stu_name=?";
+    				" and stu_name=? order by title";
 	    return jdbcTemplate.query(sql, new Object[] {name}, new RowMapper<Enroll>() {
 	        @Override
 	        public Enroll mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -59,10 +59,8 @@ public class EnrollDao {
     	return (jdbcTemplate.update(sql, new Object[] {stu_name, class_id})==1);
     }
     //D
-//    public boolean delete(Enroll enroll) {
-//    	int stu_id = enroll.getStu_id();
-//    	String class_id = enroll.getClass_id();
-//    	String sql = "delete from enrollment where stu_id=? and class_id=?";
-//    	return (jdbcTemplate.update(sql, new Object[] {stu_id, class_id}) == 1);
-//    }
+    public boolean delete(String stu_name, String class_id) {
+    	String sql = "delete from enrollment where stu_name=? and class_id=?";
+    	return (jdbcTemplate.update(sql, new Object[] {stu_name, class_id}) == 1);
+    }
 }

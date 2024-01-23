@@ -40,6 +40,31 @@ public class EnrollController {
 		
 		return "enroll";
 	}
+	
+	//D
+	@RequestMapping(value = "/enroll/delete", method = RequestMethod.GET)
+	public String enrollDelete(
+			@RequestParam(value="stu_name",required=false)String stu_name, 
+			@RequestParam(value="class_id",required=false)String class_id, 
+			Model model,
+			RedirectAttributes redirectAttributes) {
+		enrollService.deleteEnroll(stu_name, class_id);
+		redirectAttributes.addAttribute("name", stu_name);
+	    return "redirect:/enroll";
+	}
+	
+//	//D
+//	@RequestMapping(value = "/enroll/delete", method = RequestMethod.GET)
+//	public String enrollDelete(
+//			@RequestParam(value="enroll",required=false)Enroll enroll,  
+//			Model model,
+//			RedirectAttributes redirectAttributes) {
+//
+////		enrollService.deleteEnroll(enroll);
+//		System.out.println(enroll);
+//		redirectAttributes.addAttribute("name", enroll.getStu_name());
+//	    return "redirect:/enroll";
+//	}
 
 	@RequestMapping(value = "/doenroll", method = RequestMethod.POST)
 	public String doCreate(Model model, @Valid Enroll enroll, BindingResult result, RedirectAttributes redirectAttributes) { // 결과값을 result에 전달.

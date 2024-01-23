@@ -19,4 +19,7 @@ public class EnrollService {
 	public void setEnroll(Enroll enroll) {
 		enrollDao.insert(enroll);
 	}
+	public void deleteEnroll(String name, String class_id) {
+		enrollDao.delete(name, class_id);
+	}
 }
