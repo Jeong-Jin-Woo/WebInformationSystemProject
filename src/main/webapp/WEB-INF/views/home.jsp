@@ -12,10 +12,6 @@
 	<jsp:include page="menu.jsp" />
 	<p>
 		<a href="${pageContext.request.contextPath}/offers">전체 회원 정보 보기</a>
-	<p>
-		<c:out value="${pageContext.request.userPrincipal.name}">??</c:out>
-	<p>
-		<c:out value="${pageContext.request.userPrincipal}">??</c:out>
 
 		
 		<div class="container text-center">
